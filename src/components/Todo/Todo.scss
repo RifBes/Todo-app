@@ -1,0 +1,56 @@
+.todo {
+    &-card {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        position: relative;
+        background: var(--card-color);
+        border-radius: 27px;
+        width: 315px;
+        min-height: 250px;
+        padding: 10px;
+        text-align: center;
+    }
+
+    &-title {
+        font-size: 32px;
+    }
+
+    &-description {
+        font-size: 20px;
+    }
+
+    &-icons {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+}
+
+.icon {
+    cursor: pointer;
+
+    &-close {
+        position: absolute;
+        width: 40px;
+        height: 40px;
+        top: 0;
+        right: 4px;
+    }
+
+    &-close:hover,
+    &-done:hover,
+    &-edit:hover {
+        fill: var(--delete-color);
+    }
+
+    &-done {
+        height: 35px;
+        width: 35px;
+    }
+
+    &-edit {
+        height: 30px;
+        width: 30px;
+    }
+}

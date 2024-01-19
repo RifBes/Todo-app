@@ -1,0 +1,22 @@
+.main {
+    min-height: 100vh;
+    color: white;
+    background: url(./images/background.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+
+    &-title {
+        text-align: center;
+        padding: 25px;
+    }
+
+    &-todos {
+        padding: 19px 24px;
+        max-width: 800px;
+        margin: 0 auto;
+        background: #00000080;
+        border-radius: 25px;
+    }
+}

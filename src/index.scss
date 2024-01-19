@@ -1,0 +1,54 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --background-color: #280539;
+    --main-color: rgba(71, 176, 243, 0.64);
+    --button-color: #007dcd;
+    --hover-color: #3aa3e7;
+    --delete-color: #041466;
+    --active-button-color: #8240ee;
+    --active-button-hover-color: #ac7ef7;
+    --border-color: #050960;
+    --card-color: rgba(71, 176, 243, 0.64);
+}
+
+body {
+    margin: 0;
+    font-family: 'Jua', sans-serif;
+    font-size: 24px;
+}
+
+.button {
+    border-radius: 75px;
+    background: var(--button-color);
+    font-family: inherit;
+    border: 0;
+    color: currentColor;
+    font-size: 24px;
+    cursor: pointer;
+    padding-block: 5px;
+    text-transform: lowercase;
+}
+
+.button:hover {
+    background: var(--hover-color);
+}
+
+.button-active {
+    background: var(--active-button-color);
+}
+
+.button-active:hover {
+    background: var(--active-button-hover-color);
+}
+
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+        monospace;
+}
