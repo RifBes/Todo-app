@@ -27,6 +27,30 @@
     }
 }
 
+.completed {
+    background: var(--card-color-done);
+
+    .todo-title,
+    .todo-description {
+        opacity: 0.5;
+        text-decoration: line-through;
+    }
+
+    &-done {
+        color: rgb(255, 255, 255, 1);
+        display: block;
+        font-size: 32px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    &-hide {
+        display: none;
+    }
+}
+
 .icon {
     cursor: pointer;
 

@@ -16,12 +16,30 @@
     --active-button-hover-color: #ac7ef7;
     --border-color: #050960;
     --card-color: rgba(71, 176, 243, 0.64);
+    --card-color-done: rgba(71, 176, 243, 0.34);
 }
 
 body {
+    background-color: var(--background-color);
     margin: 0;
     font-family: 'Jua', sans-serif;
     font-size: 24px;
+}
+
+/* сама прокрутка */
+body::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* дорожка (индикатор выполнения) полосы прокрутки, где поверх белой полосы находится серая полоса. */
+body::-webkit-scrollbar-track {
+    background: var(--background-color);
+}
+
+/* перетаскиваемый маркер прокрутки */
+body::-webkit-scrollbar-thumb {
+    background-color: var(--main-color);
+    border-radius: 20px;
 }
 
 .button {

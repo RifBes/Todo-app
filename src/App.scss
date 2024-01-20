@@ -1,4 +1,5 @@
 .main {
+    padding-inline: 10px;
     min-height: 100vh;
     color: white;
     background: url(./images/background.jpg);
@@ -18,5 +19,11 @@
         margin: 0 auto;
         background: #00000080;
         border-radius: 25px;
+    }
+}
+
+@media (max-width: 500px) {
+    .main-todos {
+        padding-inline: 10px;
     }
 }

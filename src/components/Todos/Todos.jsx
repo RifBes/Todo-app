@@ -6,6 +6,27 @@ import { TodoContext } from '../../context/TodoContext';
 export default function Todos() {
     const [todos, setTodos] = useContext(TodoContext);
 
+    function deleteTask(id) {
+        const newTodos = todos.filter((todo) => todo.id !== id);
+        setTodos(newTodos);
+    }
+
+    function editTask(id) {
+        setTodos(
+            todos.map((todo) =>
+                todo.id === id ? { ...todo, isEdit: !todo.isEdit } : todo
+            )
+        );
+    }
+
+    function doneTask(id) {
+        setTodos(
+            todos.map((todo) =>
+                todo.id === id ? { ...todo, isDone: !todo.isDone } : todo
+            )
+        );
+    }
+
     return (
         <div className="todos">
             <div className="todos-buttons">
@@ -20,7 +41,11 @@ export default function Todos() {
                             id={todo.id}
                             title={todo.title}
                             describtion={todo.describtion}
-                            completed={todo.isDone}
+                            isDone={todo.isDone}
+                            isEdit={todo.isEdit}
+                            deleteTask={deleteTask}
+                            editTask={editTask}
+                            doneTask={doneTask}
                         />
                     ))
                 ) : (

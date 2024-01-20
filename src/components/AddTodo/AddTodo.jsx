@@ -22,6 +22,7 @@ export default function AddTodo() {
             title: valueTitle,
             describtion: valueDescription,
             isDone: false,
+            isEdit: false,
         };
 
         setTodos([...todos, newTodo]);
@@ -51,7 +52,6 @@ export default function AddTodo() {
                                 setValueDescription(e.target.value)
                             }
                             className="form-textarea"
-                            type="text"
                             id="description"
                             placeholder="Describe here!"
                         />
