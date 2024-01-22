@@ -1,4 +1,4 @@
-import { useContext, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import { TodoContext } from '../../context/TodoContext';
 import { v4 as uuidv4 } from 'uuid';
 import './AddTodo.scss';
@@ -29,6 +29,10 @@ export default function AddTodo() {
         setValueTitle('');
         setValueDescription('');
     }
+
+    useEffect(() => {
+        localStorage.setItem('todos', JSON.stringify(todos));
+    }, [todos]);
 
     return (
         <div className="addtodo">

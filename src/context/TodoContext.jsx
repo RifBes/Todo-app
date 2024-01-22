@@ -6,7 +6,8 @@ import { createContext, useState } from 'react';
 export const TodoContext = createContext();
 
 export const TodoProvider = (props) => {
-    const [todos, setTodos] = useState([]);
+    const getTodos = JSON.parse(localStorage.getItem('todos'));
+    const [todos, setTodos] = useState(getTodos ? getTodos : []);
 
     return (
         //Provider - позволяет предоставлять значение контекста компонентам.
