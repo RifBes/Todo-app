@@ -20,12 +20,12 @@ export default function AddTodo() {
             //id: new Date().getTime(),
             id: uuidv4(),
             title: valueTitle,
-            describtion: valueDescription,
+            description: valueDescription,
             isDone: false,
             isEdit: false,
         };
 
-        setTodos([...todos, newTodo]);
+        setTodos([newTodo, ...todos]);
         setValueTitle('');
         setValueDescription('');
     }
