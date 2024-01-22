@@ -45,13 +45,10 @@ export default function Todo(props) {
                     </>
                 )}
             </div>
-            <p
-                className={`${
-                    props.isDone ? 'completed-done' : 'completed-hide'
-                }`}
-            >
-                Its done! o(≧▽≦)o
-            </p>
+
+            {props.isDone && (
+                <p className="completed-done">Its done! o(≧▽≦)o</p>
+            )}
 
             {!props.edit && (
                 <div className="todo-icons">

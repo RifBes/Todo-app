@@ -1,6 +1,6 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import './App.scss';
-import { TodoContext, TodoProvider } from './context/TodoContext';
+import { TodoProvider } from './context/TodoContext';
 import AddTodo from './components/AddTodo/AddTodo';
 import Todos from './components/Todos/Todos';
 import Header from './components/Header/Header';
